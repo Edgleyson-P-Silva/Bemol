@@ -47,7 +47,19 @@
                 E clico no botão "Minha Area"
                 Então sou redirecionado para meu perfil recem criado
         
-    
+        Funcionalidade: Cadastro de Usuario
+            Cenário: Cadastro com sucesso
+                Dado que na pagina inicial do site eu seleciono "Login"
+                Quando eu escolho a opção para cadastrar-se como "Candidato"
+                E preencho o campo "Nome e sobrenome" separados com espaco e sem conter numeros
+                E preencho o campo "E-mail" no formato "email@exemplo.com"
+                E preencho o campo "Senha" com 8 a 50 caracteres
+                E preencho o campo "CEP" no formato "00000-000" 
+                E preencho o campo "Cargo Desejado"
+                E marco o checkbox "Li e aceito as Condições Legais e a Política de Privacidade"
+                E clico no botão "CADASTRAR-SE"
+                Então devo ser redirecionado para a página de preenchimento de curriculo
+               
 
 
 
