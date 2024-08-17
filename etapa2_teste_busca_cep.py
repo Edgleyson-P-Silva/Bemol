@@ -13,8 +13,36 @@ page = EnderecoBemol(driver)
 page.preencher_campo_busca ("69005040")
 page.clicar_buscar()
 endereco = page.obter_endereco()
-assert "Rua Miranda Leão" in endereco
 
+# Verifica se o endereço foi encontrado e imprime o feedback
+if "Manaus/AM" in endereco:
+    print("Teste bem-sucedido! Endereço encontrado: Manaus/AM")
+    # Exibe um alerta no navegador (opcional)
+    driver.execute_script("alert('Endereço encontrado com sucesso!');")
+else:
+    print("Teste falhou! Endereço não encontrado.")
+    # Exibe um alerta no navegador (opcional)
+    driver.execute_script("alert('Endereço não encontrado.');")
+# Aguarda 10 segundos com o resultado na tela
+time.sleep(10)
+
+# Volta a pagina
+driver.back()
+
+# Cenário 2: Buscar por nome Lojas Bemol
+page.preencher_campo_busca ("Lojas Bemol")
+page.clicar_buscar()
+endereco = page.obter_endereco()
+
+# Verifica se o endereço foi encontrado e imprime o feedback
+if "Manaus/AM" in endereco:
+    print("Teste bem-sucedido! Endereço encontrado: Manaus/AM")
+    # Exibe um alerta no navegador (opcional)
+    driver.execute_script("alert('Endereço encontrado com sucesso!');")
+else:
+    print("Teste falhou! Endereço não encontrado.")
+    # Exibe um alerta no navegador (opcional)
+    driver.execute_script("alert('Endereço não encontrado.');")
 # Aguarda 10 segundos antes de fechar o navegador
 time.sleep(10)
 

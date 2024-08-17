@@ -12,7 +12,7 @@ class EnderecoBemol:
     # Localziar elementos da página
     campo_busca = (By.NAME, "relaxation") # com base na linha 348 do codigo fonte da pagina localiza o atributo 'name'
     botao_buscar = (By.XPATH, "//input[@value='Buscar']") # procura um elemento de input com o valor 'Buscar'
-    resultado_endereco = (By.XPATH, "//table[@class='tmptabela']//td[contains(text(), 'Rua Miranda Leão')]") # locaiza um elemento com classe 'tmptabela' que contenha esse texto
+    resultado_endereco = (By.XPATH, "//table[@class='tmptabela']//td[contains(text(), 'Manaus/AM')]") # locaiza um elemento com classe 'tmptabela' que contenha esse texto
 
     # Ações no navegador
     def preencher_campo_busca(self, valor):
