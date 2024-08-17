@@ -27,3 +27,9 @@ class EnderecoBemol:
             EC.element_to_be_clickable(self.botao_buscar) # identifica o elemento a ser clicado
         )
         selecionar_buscar.click() # clica
+
+    def obter_endereco(self):
+        elemento_endereco = WebDriverWait(self.driver, 10).until( # delay de 10 segundos para que o elemento com o resultado do endereço esteja presente 
+            EC.presence_of_element_located(self.RESULTADO_ENDERECO)
+        )
+        return elemento_endereco.text # Retorna o texto contido no elemento encontrado (o endereço em si)
