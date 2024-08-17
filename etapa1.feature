@@ -1,8 +1,12 @@
+Etapa I - Fundamentos de Teste
+
+
+
 1 - Acesse a aplicação indicada:
 
 
     O alvo infojobs.com.br trata-se de um site de empregos online.
-    Nele busca de vagas podem ser feitas assim como as empresas podem fazer anuncios de oportunidades.
+    Nele buscas de vagas podem ser feitas assim como as empresas podem fazer anuncios de oportunidades.
 
 
 2 - Identifique e Mapeie os cenários de testes possíveis;:
@@ -118,29 +122,43 @@
 
 6 - Liste melhorias que forem identificadas:
 
-    Indicador de Forca da Senha: Adicionar um indicador de forca da senha que mostre ao usuario se a senha criada é fraca, média ou
-    forte, com dicas para melhora-la.
+        Indicador de Forca da Senha: Adicionar um indicador de forca da senha que mostre ao usuario se a senha criada é fraca, média ou
+        forte, com dicas para melhora-la.
 
-    Campo de Repetir Senha: Da mais seguranca de que o usuario nao ira cometer um erro digitando a senha duas vezes no cadastro.
+        Campo de Repetir Senha: Da mais seguranca de que o usuario nao ira cometer um erro digitando a senha duas vezes no cadastro.
 
-    Feedback Visual Claro para Campos Obrigatorios: ornar mais evidente quais campos sao obrigatorios, como adicionar um asterisco (*)
-    ao lado dos campos necessarios.
+        Feedback Visual Claro para Campos Obrigatorios: ornar mais evidente quais campos sao obrigatorios, como adicionar um asterisco (*)
+        ao lado dos campos necessarios.
 
-    Opcao de Visualizar Senha: Incluir botao Mostrar/Ocultar
+        Opcao de Visualizar Senha: Incluir botao Mostrar/Ocultar
 
-    Confirmacao de Email antes de Finalizar Cadastro: A confirmacao de email é enviada, porem nao ha nenhuma mensagem sobre, o usuario
-    é diretamente direcionado ao preenchimento do CV e so ao termino é notificado que é preciso ativar o email.
+        Confirmacao de Email antes de Finalizar Cadastro: A confirmacao de email é enviada, porem nao ha nenhuma mensagem sobre, o usuario
+        é diretamente direcionado ao preenchimento do CV e so ao termino é notificado que é preciso ativar o email.
 
 
 7 - Forneça parecer sobre a aplicação:
 
 
-    Experiência do Usuário (UX):
+    O site Infojobs.com.br desempenha um papel importante no mercado de trabalho brasileiro, facilitando a conexao entre candidatos e empregadores.
+    Após uma análise detalhada, aqui estão os principais pontos observados:
 
-        Pontos Positivos: A interface da pagina de cadastro é intuitiva e segue um fluxo logico e de facil entendimento, permitindo que novos
-        usuários completem o cadastro sem muita dificuldade. Os campos estao organizados de maneira clara e ajudam a guiar o usuário ao longo
-        do processo.
+        Experiência do Usuário no Cadastro:
 
-        Áreas de Melhoria: 
+            Indicador de Força da Senha: Adicionar um indicador de força da senha seria uma melhoria significativa, ajudando os usuários a criarem senhas mais seguras.
+            Campo de Repetir Senha: Incluir a opção de repetir a senha durante o cadastro aumentaria a segurança e reduziria a chance de erros de digitação.
+            Feedback Visual para Campos Obrigatórios: Tornar os campos obrigatórios mais visíveis, com a adição de asteriscos (*), melhoraria a clareza do formulário.
 
+        Opção de Visualizar Senha:
+
+            Inclusão de um botão para visualizar ou ocultar a senha é uma prática comum que aumenta a conveniência e reduz erros durante o preenchimento.
+
+        Confirmacao de E-mail:
+
+            Confirmacao de e-mail ocorre, mas a ausência de uma notificação clara antes do preenchimento do currículo pode confundir o usuário.
+            Recomenda-se que a confirmação de e-mail seja destacada antes que o usuário avance para as próximas etapas.
+
+
+    O Infojobs.com.br é uma ferramenta eficaz para quem busca novas oportunidades de emprego e para empresas que desejam divulgar vagas.
+    Porem, alguns ajustes na experiencia do usuario, especialmente no processo de cadastro, poderiam aumentar a segurança e facilitar ainda mais o uso da plataforma.
+    Implementar as melhorias sugeridas pode resultar em uma maior satisfacao dos usuários e potencialmente aumentar as taxas de cadastro e retenção na plataforma.
 
