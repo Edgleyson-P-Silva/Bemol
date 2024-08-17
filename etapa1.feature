@@ -1,8 +1,14 @@
-1 - O alvo infojobs.com.br trata-se de um site de empregos online.
+1 - Acesse a aplicação indicada:
+
+
+    O alvo infojobs.com.br trata-se de um site de empregos online.
     Nele busca de vagas podem ser feitas assim como as empresas podem fazer anuncios de oportunidades.
 
 
-2 - Os cenarios de testes possiveis serao identificados e mapeados de acordo com algumas das funcionalidades do site:
+2 - Identifique e Mapeie os cenários de testes possíveis;:
+
+
+    Os cenarios de testes possiveis serao identificados e mapeados de acordo com algumas das funcionalidades do site:
 
         Busca de Vagas: Filtros de busca (localizacao, area de atuacao, tipo de contrato, etc.);
         Cadastro de Usuario: Criar conta, login, recuperacao de senha;
@@ -20,8 +26,11 @@
         Cenario 7: Candidatura com falha (curriculo incompleto).
         
 
-3 - Uma estrategia que poderia ser usada seria testes de funcionalidade, Verificar se todas as funcionalidades do site
- funcionam conforme o esperado, incluindo busca de vagas, cadastro de usuario, criacao de curriculo e anuncio de vagas:
+3 - Descreva uma estratégia de testes para a execução:
+
+
+    Uma estrategia que poderia ser usada seria testes de funcionalidade, Verificar se todas as funcionalidades do site
+    funcionam conforme o esperado, incluindo busca de vagas, cadastro de usuario, criacao de curriculo e anuncio de vagas:
 
         Cadastro de Usuario: Testar fluxos de criacao de conta, login, e recuperacao de senha. Verificar tanto cenarios
         de sucesso quanto falhas (dados invalidos, duplicidade de e-mail, etc).
@@ -39,7 +48,8 @@
         Anuncio de Vagas: Verificar o processo de criacao, edicao e exclusao de vagas por empresas. 
 
 
-4 - Planos de Teste:
+4 - Elabore um plano de teste para essa aplicação:
+
 
         Funcionalidade: Cadastro de Usuario
             Como um novo usuario
@@ -87,3 +97,50 @@
                 E marco o checkbox "Li e aceito as Condicões Legais e a Política de Privacidade"
                 E clico no botao "CADASTRAR-SE"
                 Entao devo ver uma mensagem de erro informando que a senha é fraca
+
+
+5 - Identifique eventuais bug:
+
+
+    Layout e Design:
+        Acessando a página de cadastro pelo desktop, existe um banner a esquerda da pagina com a figura de uma mulher com
+        descricoes do que o usuario pode esperar que va conseguir com o site e algumas empresas que participam.
+        Ao o usuario tentar realizar um cadastro sem o checkbox das condicoes legais e a politica de privacidade aceito, a
+        mensagem "Para cadastrar-se é obrigatório ter aceitado as Condições Legais e a Política de Privacidade." é exibida.
+        O bug consiste em alem dos campos de cadastros serem reajustado de posicoes devido a exibicao dessa nova mensagem, o 
+        banner da esquerda tambem se move em uma especie de zoom que nao e bem necessario pela dimensao da pagina nao mudar tanto.
+
+    Mensagens e Instrucoes:
+        Na parte de "Senha", quando uma senha e preenchida com menos de 8 caracteres e exibida a mensagem "Senha inválida. Deve ter
+        de 8 a 50 caracteres." Porem, se o usuario digitar uma senha maior que 50 caracteres, a mensagem nao e reexibida. Me parece
+        que a senha uma vez que atinge o limite ela fica se sobreescrevendo.
+
+
+6 - Liste melhorias que forem identificadas:
+
+    Indicador de Forca da Senha: Adicionar um indicador de forca da senha que mostre ao usuario se a senha criada é fraca, média ou
+    forte, com dicas para melhora-la.
+
+    Campo de Repetir Senha: Da mais seguranca de que o usuario nao ira cometer um erro digitando a senha duas vezes no cadastro.
+
+    Feedback Visual Claro para Campos Obrigatorios: ornar mais evidente quais campos sao obrigatorios, como adicionar um asterisco (*)
+    ao lado dos campos necessarios.
+
+    Opcao de Visualizar Senha: Incluir botao Mostrar/Ocultar
+
+    Confirmacao de Email antes de Finalizar Cadastro: A confirmacao de email é enviada, porem nao ha nenhuma mensagem sobre, o usuario
+    é diretamente direcionado ao preenchimento do CV e so ao termino é notificado que é preciso ativar o email.
+
+
+7 - Forneça parecer sobre a aplicação:
+
+
+    Experiência do Usuário (UX):
+
+        Pontos Positivos: A interface da pagina de cadastro é intuitiva e segue um fluxo logico e de facil entendimento, permitindo que novos
+        usuários completem o cadastro sem muita dificuldade. Os campos estao organizados de maneira clara e ajudam a guiar o usuário ao longo
+        do processo.
+
+        Áreas de Melhoria: 
+
+
