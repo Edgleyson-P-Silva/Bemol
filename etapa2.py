@@ -7,10 +7,23 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class EnderecoBemol:
     def __init__(self, driver):
-        self.driver = driver
+        self.driver = driver # para  intereção como navegador
 
     # Localziar elementos da página
-    campo_busca = (By.NAME, "relaxation") # com base na linha 348 do codigo fonte da pagina
-    botao_buscar = (By.XPATH, "//imput[@value='Buscar]")
-    resultado_endereco = (By.XPATH, "//table[@class='tmptabela']//td[contains(text(), 'Rua Miranda Leão')]")
+    campo_busca = (By.NAME, "relaxation") # com base na linha 348 do codigo fonte da pagina localiza o atributo 'name'
+    botao_buscar = (By.XPATH, "//imput[@value='Buscar]") # procura um elemento de input com o valor 'Buscar'
+    resultado_endereco = (By.XPATH, "//table[@class='tmptabela']//td[contains(text(), 'Rua Miranda Leão')]") # locaiza um elemento com classe 'tmptabela' que contenha esse texto
 
+    # Ações no navegador
+    def preencher_campo_busca(self, valor):
+        busca_input = WebDriverWait(self.driver, 10).until( # delay de 10 segundos para o carregamento da pagina
+            EC.presence_of_element_located(self.campo_busca) # aguarda a presença do elemento localizado por campo_busca
+        )
+        busca_input.clear() # limpa o campo
+        busca_input.send_keys(valor) # insere o valor desejado no campo de busca
+
+    def clicar_buscar(self):
+        selecionar_buscar = WebDriverWait(self.driver,10).until( # delay de 10 seundos para a presença do botão Buscar
+            EC.element_to_be_clickable(self.botao_buscar) # identifica o elemento a ser clicado
+        )
+        selecionar_buscar.click() # clica
