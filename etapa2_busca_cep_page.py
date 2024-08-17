@@ -30,6 +30,6 @@ class EnderecoBemol:
 
     def obter_endereco(self):
         elemento_endereco = WebDriverWait(self.driver, 10).until( # delay de 10 segundos para que o elemento com o resultado do endereço esteja presente 
-            EC.presence_of_element_located(self.RESULTADO_ENDERECO)
+            EC.presence_of_element_located(self.resultado_endereco)
         )
         return elemento_endereco.text # Retorna o texto contido no elemento encontrado (o endereço em si)
