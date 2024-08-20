@@ -56,11 +56,14 @@ class BuscaHotelTrivago:
         )
         return nota_estrela.get_attribute("content")
     
-    def obter_nota(self):
-        nota_hotel = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located(self.avaliacao_nota)
-        )
-        return nota_hotel[1].get_attribute("content")
+
+#    def obter_nota(self):
+#        nota_hotel = WebDriverWait(self.driver, 10).until(
+#            EC.presence_of_element_located(*self.avaliacao_nota)
+#        )
+#        return nota_hotel.text
+    
+
 
     def obter_preco(self, elemento):
         preco_valor = WebDriverWait(self.driver, 10).until(

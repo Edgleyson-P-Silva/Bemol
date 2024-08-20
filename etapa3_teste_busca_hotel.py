@@ -20,7 +20,7 @@ page.clicar_pesquisar()
 time.sleep(5)
 
 # Ordenar por avaliação e sugestões
-time.sleep(20)
+time.sleep(10)
 page.clicar_botao_ordenar()
 time.sleep(3)
 page.selecionar_opcao_avaliacao_e_sugestoes()
@@ -30,17 +30,17 @@ time.sleep(5)
 primeiro_resultado = page.obter_primeiro_resultado()
 nome_hotel = page.obter_nome_hotel(primeiro_resultado)
 avaliacao = page.obter_avaliacoes()
-avaliacao_nota = page.obter_nota()
+#avaliacao_nota = page.obter_nota()
 preco = page.obter_preco(primeiro_resultado)
 
 # Imprimir resultados
 print(f"Hotel: {nome_hotel}")
 print(f"Avaliação: {avaliacao} estrelas")
-print(f"Avaliação em nota: {avaliacao_nota}")
+#print(f"Avaliação em nota: {avaliacao_nota}")
 print(f"Preço: {preco}")
 
-driver.execute_script(f"alert('Hotel {nome_hotel} com {avaliacao} estrelas e {avaliacao_nota} de nota de usuário com o preço de {preco}');")
-time.sleep(5)
+driver.execute_script(f"alert('Hotel {nome_hotel} com {avaliacao} estrelas e com o preço de {preco}');")
+time.sleep(10)
 
 # Fechar o navegador
 driver.quit()
