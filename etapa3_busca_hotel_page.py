@@ -24,14 +24,14 @@ class BuscaHotelTrivago:
         busca_input.send_keys(destino)
 
     def clicar_pesquisar(self):
-        buscar_button = WebDriverWait(self.driver, 10).until(
+        buscar_button = WebDriverWait(self.driver, 15).until(
             EC.element_to_be_clickable(self.botao_pesquisar)
         )
         buscar_button.click()
 
     def clicar_botao_ordenar(self):
         botao_ordenar = WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable(self.botao_ordenar)
+            EC.element_to_be_clickable(self.opcao_avaliacao_sugestao)
         )
         botao_ordenar.click()
 
@@ -55,6 +55,12 @@ class BuscaHotelTrivago:
             EC.presence_of_element_located(self.avaliacao_estrela)
         )
         return nota_estrela.get_attribute("content")
+    
+    def obter_nota(self):
+        nota_hotel = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located(self.avaliacao_nota)
+        )
+        return nota_hotel[1].get_attribute("content")
 
     def obter_preco(self, elemento):
         preco_valor = WebDriverWait(self.driver, 10).until(
