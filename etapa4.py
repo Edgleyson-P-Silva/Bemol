@@ -13,3 +13,9 @@ class TestServerestAPI(unittest.TestCase):
             "password": "qaenginnerbemol2024",
             "administrador": "true"
         }
+
+    def login(self):
+        dados_login = {
+            "email": "edgleyson99@outlook.com", 
+            "password": "qaenginnerbemol2024"
+        }
