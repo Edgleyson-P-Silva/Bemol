@@ -91,3 +91,16 @@ def verificar_produto(produto_id):
     else:
         # Se falahr mensagem de erro
         raise Exception("Erro ao buscar o produto.")
+    
+    
+    
+# Testa a criação e verificação de um usuário
+usuario_id = criar_usuario()  # Cria um novo usuário e obtém o ID
+verificar_usuario(usuario_id)  # Verifica se o usuário foi criado corretamente
+
+# Testa a criação e verificação de um produto
+produto_id = criar_produto()  # Cria um novo produto e obtém o ID
+verificar_produto(produto_id)  # Verifica se o produto foi criado corretamente
+
+# Mensagem de sucesso se todos os testes passarem
+print("Todos os testes foram realizados com sucesso!")
